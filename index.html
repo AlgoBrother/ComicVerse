@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComicVerse Hub | Your Ultimate Comic Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <h1>COMICVERSE</h1>
+                <span class="tagline">Hub</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="browse.html">Browse Comics</a></li>
+                <li><a href="cart.html">Cart <span id="cart-count" class="cart-badge">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <section class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=1600&h=600&fit=crop" alt="Featured Comic">
+                <div class="carousel-content">
+                    <h2>The Amazing Spider-Verse</h2>
+                    <p>New multiverse saga begins</p>
+                    <a href="comic-detail.html?id=001" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=1600&h=600&fit=crop" alt="Featured Comic">
+                <div class="carousel-content">
+                    <h2>Batman: Dark Knights</h2>
+                    <p>The legend returns</p>
+                    <a href="comic-detail.html?id=002" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1531259683007-016a7b628fc3?w=1600&h=600&fit=crop" alt="Featured Comic">
+                <div class="carousel-content">
+                    <h2>X-Men: Mutant Genesis</h2>
+                    <p>Evolution begins now</p>
+                    <a href="comic-detail.html?id=003" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn prev" onclick="moveCarousel(-1)">&#10094;</button>
+        <button class="carousel-btn next" onclick="moveCarousel(1)">&#10095;</button>
+        <div class="carousel-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- New Releases -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">New Releases</h2>
+            <div class="comic-grid" id="new-releases"></div>
+        </div>
+    </section>
+
+    <!-- Popular Series -->
+    <section class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title">Popular Series</h2>
+            <div class="comic-grid" id="popular-series"></div>
+        </div>
+    </section>
+
+    <!-- Publisher Spotlights -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Publisher Spotlights</h2>
+            <div class="publisher-grid">
+                <div class="publisher-card" onclick="filterByPublisher('Marvel')">
+                    <h3>MARVEL</h3>
+                    <p>Explore the Marvel Universe</p>
+                </div>
+                <div class="publisher-card" onclick="filterByPublisher('DC')">
+                    <h3>DC COMICS</h3>
+                    <p>Enter the DC Multiverse</p>
+                </div>
+                <div class="publisher-card" onclick="filterByPublisher('Image')">
+                    <h3>IMAGE</h3>
+                    <p>Discover Independent Stories</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ComicVerse Hub</h3>
+                    <p>Your ultimate destination for comics</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="browse.html">Browse</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Publishers</h4>
+                    <ul>
+                        <li><a href="browse.html?publisher=Marvel">Marvel</a></li>
+                        <li><a href="browse.html?publisher=DC">DC Comics</a></li>
+                        <li><a href="browse.html?publisher=Image">Image</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ComicVerse Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/comics-data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

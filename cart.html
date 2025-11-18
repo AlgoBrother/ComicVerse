@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | ComicVerse Hub</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <h1>COMICVERSE</h1>
+                <span class="tagline">Hub</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse Comics</a></li>
+                <li><a href="cart.html" class="active">Cart <span id="cart-count" class="cart-badge">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cart Header -->
+    <section class="browse-header">
+        <div class="container">
+            <h1>Shopping Cart</h1>
+            <p>Review your items</p>
+        </div>
+    </section>
+
+    <!-- Cart Content -->
+    <section class="section">
+        <div class="container">
+            <div class="cart-container">
+                <div class="cart-items" id="cart-items">
+                    <div class="empty-cart">
+                        <p>Your cart is empty</p>
+                        <a href="browse.html" class="btn btn-primary">Browse Comics</a>
+                    </div>
+                </div>
+                <div class="cart-summary" id="cart-summary" style="display: none;">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax (10%):</span>
+                        <span id="tax">$0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="total">$0.00</span>
+                    </div>
+                    <button class="btn btn-primary btn-block" onclick="checkout()">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <h2>Order Confirmed!</h2>
+            <p>Thank you for your simulated order!</p>
+            <p>Your comics will be "delivered" soon.</p>
+            <button class="btn btn-primary" onclick="closeModal()">Continue Shopping</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ComicVerse Hub</h3>
+                    <p>Your ultimate destination for comics</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="browse.html">Browse</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Publishers</h4>
+                    <ul>
+                        <li><a href="browse.html?publisher=Marvel">Marvel</a></li>
+                        <li><a href="browse.html?publisher=DC">DC Comics</a></li>
+                        <li><a href="browse.html?publisher=Image">Image</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ComicVerse Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/comics-data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/cart-page.js"></script>
+</body>
+</html>
