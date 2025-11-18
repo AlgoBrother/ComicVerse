@@ -72,7 +72,7 @@ const comicsData = [
         genre: 'Superhero',
         price: 5.99,
         releaseDate: '2024-02-10',
-        image: 'https://images.unsplash.com/photo-1635805737707-575885ab0b61?w=400&h=600&fit=crop',
+        image: 'https://images.unsplash.com/photo-1608889825103-eb5ed706fc64?w=400&h=600&fit=crop',
         writer: 'Jason Aaron',
         artist: 'Ed McGuinness',
         synopsis: 'The Avengers assemble for their most dangerous mission yet. When an ancient cosmic entity threatens all of existence, Earth\'s Mightiest Heroes must unite or watch the universe fall.',
